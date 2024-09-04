@@ -11,7 +11,7 @@ selectedFood.addEventListener("change", function () {
     getData(this.value)
 })
 
-//invoke_getData_Function
+//Invoke_getData_Function
 getData(`cinnamon`)
 
 //Funtion_to_Get_Data
