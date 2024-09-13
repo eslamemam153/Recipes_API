@@ -22,6 +22,8 @@ function getData(data) {
         if (myhttp.readyState == 4) {
             let allData = JSON.parse(myhttp.response);
             showData(allData.recipes)
+            console.log(allData.recipes);
+            
         }
     })
 }
@@ -32,7 +34,7 @@ function showData(data) {
     for (let i = 0; i < data.length; i++) {
         box += `
          <div class="col-md-4">
-        <img class="w-100 mb-2" src=" ${data[i].image_url}" alt="">
+       <a href="${data[i].source_url}"><img class="w-100 mb-2" src="${data[i].image_url}" alt=""></a>
         <p><b>Title: </b>${data[i].title}</p>
         <p><b>Recipe Id: </b>${data[i].recipe_id}</p>
         <p><b>Puplisher: </b>${data[i].publisher}</p>
